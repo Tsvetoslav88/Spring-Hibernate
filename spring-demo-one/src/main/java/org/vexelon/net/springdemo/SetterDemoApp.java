@@ -16,6 +16,11 @@ public class SetterDemoApp {
 
 		// let's call our new method for fortunes
 		System.out.println(theCoach.getDailyFortune());
+		
+		// call our new methods to get the literal value
+		System.out.println(theCoach.getEmailAddress());
+		
+		System.out.println(theCoach.getTeam());
 
 		// close the context
 		context.close();
