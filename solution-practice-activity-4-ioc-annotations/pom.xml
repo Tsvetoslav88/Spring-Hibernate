@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.vexelon.net</groupId>
-	<artifactId>spring-demo-annotations</artifactId>
+	<artifactId>solution-practice-activity-4-ioc-annotations</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-demo-annotations</name>
+	<name>solution-practice-activity-4-ioc-annotations</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
