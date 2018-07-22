@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RandomFortuneService implements FortuneService {
-
+	
 	// create an array of strings
 	private String[] date = {
 			"Beware of the wolf in sheep's clothing",
@@ -24,5 +24,6 @@ public class RandomFortuneService implements FortuneService {
 		int index = myRandom.nextInt(date.length);
 		return date[index];
 	}
+	
 
 }

@@ -10,6 +10,8 @@
 	<!-- add entry to enable component scanning -->
 	<context:component-scan base-package="org.vexelon.net.spring_demo_annotations"/>
     
+    <context:property-placeholder location="classpath:sport.properties"/> 
+    
 </beans>
 
 

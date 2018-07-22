@@ -2,11 +2,18 @@ package org.vexelon.net.spring_demo_annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 
+	@Value("${foo.email}")
+	private String email;
+	
+	@Value("${foo.team}")
+	private String team;
+	
 	//Field DI
 	@Autowired
 	@Qualifier("randomFortuneService")
@@ -42,4 +49,9 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+	public String getPropertiesField() {
+		return "Tennis Coach email is: " + email + " and is part of team: " + team;
+	}
+
+	
 }
