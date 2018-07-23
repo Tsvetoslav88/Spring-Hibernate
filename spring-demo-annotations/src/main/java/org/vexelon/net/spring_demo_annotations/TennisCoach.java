@@ -1,5 +1,8 @@
 package org.vexelon.net.spring_demo_annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,7 +10,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	@Value("${foo.email}")
@@ -39,6 +42,18 @@ public class TennisCoach implements Coach {
 //		System.out.println(">> Tennis Coach: inside setFortuneService() method");
 //		this.fortuneService = theFortuneService;
 //	}
+	
+	// define my init method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> Tennis Choach: inside of doMyStartupStaff()");
+	}
+	
+	// define my destroy method
+	@PreDestroy
+	public void doMyCleanupStaff() {
+		System.out.println(">> Tennis Coach: inside of doMyCleanupStaff()");
+	}
 	
 	@Override
 	public String getDailyWorkout() {
