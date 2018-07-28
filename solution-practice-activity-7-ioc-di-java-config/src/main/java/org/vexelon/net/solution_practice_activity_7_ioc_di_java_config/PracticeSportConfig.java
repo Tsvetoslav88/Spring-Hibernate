@@ -15,7 +15,12 @@ public class PracticeSportConfig {
 	// define bean for our swim coach AND inject dependency
 	@Bean
 	public Coach wrestlingCoach(){
-		WrestlingCoach myWrestlingCoach = new WrestlingCoach(happyFortuneService());
+		
+		// Java configuration if we use Construcotr injection
+//		WrestlingCoach myWrestlingCoach = new WrestlingCoach(happyFortuneService());
+		
+		// Java configuration if we use Filed
+		WrestlingCoach myWrestlingCoach = new WrestlingCoach();
 		return myWrestlingCoach;
 	}
 	

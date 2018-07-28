@@ -4,13 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class WrestlingCoach implements Coach {
 
+	//If we use Fild injection
+	@Autowired
 	FortuneService fortuneService;
 	
-	@Autowired
-	public WrestlingCoach(FortuneService theFortuneService) {
+
+	public WrestlingCoach() {
 		System.out.println("Inside Wrestling Coach constructor");
-		this.fortuneService = theFortuneService;
 	}
+
+	//If we use Construcotr injection
+	//	@Autowired
+//	public WrestlingCoach(FortuneService theFortuneService) {
+//		System.out.println("Inside Wrestling Coach constructor");
+//		this.fortuneService = theFortuneService;
+//	}
 	
 	@Override
 	public String getDailyWorkout() {
