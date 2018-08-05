@@ -13,6 +13,8 @@
 
 	<!-- Step 3: Add support for component scanning -->
 	<context:component-scan base-package="org.vexelon.net" />
+	
+	
 
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
@@ -23,6 +25,9 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- Add resource path where are located imags, css, js  -->
+	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources> 
 
 </beans>
 
