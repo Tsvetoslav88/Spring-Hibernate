@@ -16,7 +16,12 @@
 		
 		<br><br>
 		
+		Country:
+		<form:select path="contry">
+			<form:options items="${student.countryOption}"/>
+		</form:select>
 		
+		<br><br>
 		<input type="submit" value="Submit">
 	</form:form>
 </body>
