@@ -34,6 +34,13 @@
 	
 	<!-- Load the country options properties file -->
 	<util:properties id="countryOptions" location="classpath:../countries.properties" />
+	
+	<!-- Load custom message resources -->
+	<bean id="messageSource" 
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames" value="resources/messages"></property>
+	</bean>
+
 
 </beans>
 
