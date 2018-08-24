@@ -9,7 +9,7 @@ public class TestJdbc {
 		
 		String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false";
 		String user = "hbstudent";
-		String password = "mysql";
+		String password = "hbstudent";
 		try {
 			System.out.println("Connecting to DB: " + jdbcUrl);
 			Connection myConn = DriverManager.getConnection(jdbcUrl, user, password);
