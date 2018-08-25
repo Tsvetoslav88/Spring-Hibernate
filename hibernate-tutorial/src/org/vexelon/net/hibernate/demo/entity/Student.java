@@ -1,4 +1,4 @@
-package org.vexelon.net.entity;
+package org.vexelon.net.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
