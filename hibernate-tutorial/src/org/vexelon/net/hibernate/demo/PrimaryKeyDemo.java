@@ -1,13 +1,16 @@
 package org.vexelon.net.hibernate.demo;
 
+import java.text.ParseException;
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.vexelon.net.hibernate.demo.entity.Student;
 
-public class PrimaryKeyDema {
+public class PrimaryKeyDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		// create SessionFactory
 		SessionFactory factory = new Configuration()
@@ -21,9 +24,11 @@ public class PrimaryKeyDema {
 		try {
 			// create 3 student objects
 			System.out.println("Creating 2 student objects");
-			Student tempStudent1 = new Student("Ivan", "Ivanov", "Ivan@abv.bg");
-			Student tempStudent2 = new Student("Mitko", "Petrov", "Mitko@abv.bg");
-			Student tempStudent3 = new Student("Petrov", "Patrov", "Petar@abv.bg");
+			String theDateOfBirthStr = "31/12/1998";
+            Date theDateOfBirth = DateUtils.parseDate(theDateOfBirthStr);
+			Student tempStudent1 = new Student("Ivan", "Ivanov", "Ivan@abv.bg",theDateOfBirth);
+			Student tempStudent2 = new Student("Mitko", "Petrov", "Mitko@abv.bg",theDateOfBirth);
+			Student tempStudent3 = new Student("Petrov", "Patrov", "Petar@abv.bg",theDateOfBirth);
 
 			// start a transaction
 			session.beginTransaction();

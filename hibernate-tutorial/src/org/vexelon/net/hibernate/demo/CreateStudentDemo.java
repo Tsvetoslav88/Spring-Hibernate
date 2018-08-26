@@ -1,5 +1,8 @@
 package org.vexelon.net.hibernate.demo;
 
+import java.text.ParseException;
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -7,7 +10,7 @@ import org.vexelon.net.hibernate.demo.entity.Student;
 
 public class CreateStudentDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// create SessionFactory
 		SessionFactory factory = new Configuration()
 								.configure("hibernate.cfg.xml")
@@ -21,8 +24,11 @@ public class CreateStudentDemo {
 		try {
 			// create a student object
 			System.out.println("Creating a new student object");
-			Student tempStudent = new Student("Tsetso", "Tsetso", "Tsetso@abv.bg");
-			
+			String theDateOfBirthStr = "31/12/1998";
+            Date theDateOfBirth = DateUtils.parseDate(theDateOfBirthStr);
+            
+            Student tempStudent = new Student("Paully", "Doe", "paul@luv.com", theDateOfBirth);
+            
 			// start a transaction
 			session.beginTransaction();
 					
