@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.vexelon.net.hibernate.demo.entity.Instructor;
 import org.vexelon.net.hibernate.demo.entity.InstructorDetail;
 
-public class GetInstructorDetailDemo {
+public class DeleteInstructorDetailDemo {
 
 	public static void main(String[] args) throws ParseException {
 		// create SessionFactory
@@ -24,7 +24,7 @@ public class GetInstructorDetailDemo {
 			session.beginTransaction();
 
 			// get the instructor detail object
-			int theId = 2;
+			int theId = 3;
 			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
 
 			// print the instructor detail
@@ -33,6 +33,14 @@ public class GetInstructorDetailDemo {
 			// print the associated instructor
 			System.out.println("the associated instructor: " + tempInstructorDetail.getInstructor());
 
+			// not let's delete the instructor details
+			
+			//remove the associated object referance
+			//break bi-directional referance
+			tempInstructorDetail.getInstructor().setInstructorDetail(null);
+			System.out.println("Deleting tempInstructorDetail: " + tempInstructorDetail);
+			session.delete(tempInstructorDetail);
+			
 			// commit transaction
 			session.getTransaction().commit();
 
