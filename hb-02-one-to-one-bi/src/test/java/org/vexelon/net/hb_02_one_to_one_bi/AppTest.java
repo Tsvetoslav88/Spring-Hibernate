@@ -1,4 +1,4 @@
-package org.vexelon.net.hb_01_one_to_one_bi;
+package org.vexelon.net.hb_02_one_to_one_bi;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
