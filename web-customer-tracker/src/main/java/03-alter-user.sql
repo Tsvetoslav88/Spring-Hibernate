@@ -1,0 +1,1 @@
+alter user 'springstudent'@'localhost' identified with mysql_native_password by 'springstudent';
