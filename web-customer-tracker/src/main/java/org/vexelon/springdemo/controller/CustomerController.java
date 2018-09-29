@@ -9,20 +9,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.vexelon.springdemo.dao.CustomerDAO;
 import org.vexelon.springdemo.entity.Customer;
+import org.vexelon.springdemo.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 
-	// need to inject the customer dao
+	// need to inject the customer service
 	@Autowired
-	private CustomerDAO customerDAO;
+	private CustomerService customerService;
 
 	@GetMapping("/list")
 	public String listCustomers(Model theModel) {
 
 		// get customers from the service
-		List<Customer> theCustomers = customerDAO.getCustomers();
+		List<Customer> theCustomers = customerService.getCustomers();
 
 		// add the customers to the model
 		theModel.addAttribute("customers", theCustomers);
