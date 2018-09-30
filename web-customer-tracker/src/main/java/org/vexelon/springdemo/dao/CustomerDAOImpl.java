@@ -19,7 +19,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 
 	public List<Customer> getCustomers() {
-		
+
 		// get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 
@@ -32,5 +32,16 @@ public class CustomerDAOImpl implements CustomerDAO {
 		// return the results
 		return customers;
 	}
+
+	public void saveCustomer(Customer theCustomer) {
+
+		// get the current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+
+		// save the customer
+		currentSession.save(theCustomer);
+	}
+
+
 
 }
