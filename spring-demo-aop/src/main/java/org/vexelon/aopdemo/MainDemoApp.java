@@ -2,6 +2,7 @@ package org.vexelon.aopdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.vexelon.aopdemo.dao.AccountDAO;
+import org.vexelon.aopdemo.dao.MembershipDAO;
 
 public class MainDemoApp {
 
@@ -12,8 +13,14 @@ public class MainDemoApp {
 		//get bean from spring container
 		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
+		// get member bean from spring container
+		MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
+		
 		//call the business method
 		theAccountDAO.addAccount();
+		
+		//call the membership business method
+		theMembershipDAO.addAccount();
 		
 		//close the context
 		context.close();
