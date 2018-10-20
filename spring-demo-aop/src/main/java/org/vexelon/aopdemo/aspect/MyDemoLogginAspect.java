@@ -11,7 +11,7 @@ public class MyDemoLogginAspect {
 	//this is where we add all of our related advices for logging
 	
 	//let's start with an @Before advice
-	@Before("execution(public void org.vexelon.aopdemo.dao.AccountDAO.addAccount())")
+	@Before("execution(* org.vexelon.aopdemo.dao.*.*(..))")
 	public void beforeAccountAdvice() {
 		System.out.println("\n====>>> Executiing @Before advice on method()");
 	}
