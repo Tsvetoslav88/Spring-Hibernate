@@ -23,6 +23,25 @@
 	
 	</p>
 	
+	<security:authorize access="hasRole('MANAGER')">
+		
+		<!-- Add a link to point to /leaders ... this is for managers -->
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+			(Only for Manager peers)
+		</p>
+	</security:authorize>
+	
+	
+	<security:authorize access="hasRole('ADMINISTRATOR')">
+	
+		<!-- Add a link to point to /systems ... this is for admins-->
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a>
+			(Only for Admin peers)
+		</p>
+	</security:authorize>
+	
 	<hr>
 	
 	
