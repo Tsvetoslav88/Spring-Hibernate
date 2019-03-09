@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,6 +45,15 @@ public class CustomerRestController {
 		
 		// also just in case the pass id in JSON ... set id to 0
 		theCustomer.setId(0);
+		
+		customerSerivce.saveCustomer(theCustomer);
+		
+		return theCustomer;
+	}
+	
+	// add mapping for PUT/customers - update an existing customer
+	@PutMapping("/customers")
+	public Customer updateCustomer(@RequestBody Customer theCustomer) {
 		
 		customerSerivce.saveCustomer(theCustomer);
 		
