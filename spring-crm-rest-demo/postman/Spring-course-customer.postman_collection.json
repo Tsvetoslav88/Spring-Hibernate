@@ -1,0 +1,146 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring-course-customer",
+		"_postman_id": "abdafa92-7f18-fcb0-8005-daa67ce1c192",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomers",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFyeTp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomer by ID",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic am9objp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Not found exception",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers/111",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic am9objp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bad request exception",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers/dfsfds",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic am9objp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Customer",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFyeTp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Nikolay\",\n    \"lastName\": \"Nikolov\",\n    \"email\": \"Nikolay@luv2code.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFyeTp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Nikolay\",\n    \"lastName\": \"Nikolov9999\",\n    \"email\": \"Nikolay@luv2code.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customers",
+			"request": {
+				"url": "http://localhost:8080/spring-crm-rest/api/customers/7",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic am9objp0ZXN0MTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

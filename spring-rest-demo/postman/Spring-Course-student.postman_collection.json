@@ -1,0 +1,55 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring-Course-student",
+		"_postman_id": "5237f2ab-2acb-2fe1-1233-4fa84b1c3a65",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HelloWorld",
+			"request": {
+				"url": "http://localhost:8080/spring-rest-demo/test/hello",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Students",
+			"request": {
+				"url": "http://localhost:8080/spring-rest-demo/api/students",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Students not found exc",
+			"request": {
+				"url": "http://localhost:8080/spring-rest-demo/api/students/11",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Students bad request exc",
+			"request": {
+				"url": "http://localhost:8080/spring-rest-demo/api/students/ffdsf",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
