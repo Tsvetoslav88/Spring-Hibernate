@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring_employee",
+		"_postman_id": "1dcae289-d362-9949-1ed1-509fbbc1ae55",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllEmployees",
+			"request": {
+				"url": "localhost:8080/api/employees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeById",
+			"request": {
+				"url": "localhost:8080/api/employees/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"url": "localhost:8080/api/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Leslie\",\n    \"lastName\": \"Ivan\",\n    \"email\": \"leslie@luv2code.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"url": "localhost:8080/api/employees/4",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Lesli1111\",\n    \"lastName\": \"Iva1233\",\n    \"email\": \"leslie@luv2code.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"url": "localhost:8080/api/employees/6",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 6,\n    \"firstName\": \"Leslie\",\n    \"lastName\": \"Iva1233\",\n    \"email\": \"leslie@luv2code.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
